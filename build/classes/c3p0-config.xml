@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<c3p0-config>
+	<!-- 默认配置 -->
+	<default-config>
+			<!-- 数据库信息配置 -->
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+			<!-- jdbc:mysql://127.0.0.1:3306/test1?useSSL=false -->
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/dome?useSSL=false</property>		
+		<property name="user">root</property>
+		<property name="password">123456</property>
+
+			<!-- 数据库连接池其它信息配置 -->
+			<!-- 初始化连接数目 -->
+		<property name="initialPoolSize">5</property>
+			<!-- 最大连接数目 -->
+		<property name="maxPoolSize">10</property>
+		<property name="minPoolSize">5</property>
+			<!-- 最小闲置数目 -->
+		<property name="maxIdleTime">30</property> 
+		<property name="maxStatements">200</property> 
+		<!--设置超时连接时间 如果数据库配置信息不正确 就在时间过后报错-->
+		<property name="checkoutTimeout">3000</property>		
+	</default-config>
+
+	<named-config name="itcast">
+		<property name="driverClass">com.mysql.jdbc.Driver</property>
+		<property name="jdbcUrl">jdbc:mysql://127.0.0.1:3306/dome?useSSL=false
+		</property>
+		<property name="user">root</property>
+		<property name="password">123456</property>
+		<property name="initialPoolSize">5</property>
+		<!-- 最大连接数目 -->
+		<property name="maxPoolSize">10</property>
+		<property name="minPoolSize">5</property>
+	</named-config>
+
+</c3p0-config>
